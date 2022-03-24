@@ -12,7 +12,7 @@ This assignment solves an algorithmic problem, where the factorial is found of t
 * The code must be packaged and executed as a docker container
 
 ## Sample Output
-![alt text](SampleOutput.PNG "Sample Output")
+![alt text](Images/SampleOutput.PNG "Sample Output")
 
 ## Software Description
 
@@ -26,11 +26,12 @@ This assignment solves an algorithmic problem, where the factorial is found of t
 
 ## File Structure
 
-* [README.md](.\README\README.md)
-* [Results.PNG](.\README\Results.PNG)
-* [SampleOutput.PNG](.\README\SampleOutput.PNG)
-* [Dockerfile](.\Dockerfile)
-* [factorial-digits.py](.\factorial-digits.py)
+* Images
+    * Results.PNG
+    * SampleOutput.PNG
+* Dockerfile
+* factorial-digits.py
+* README.md
 
 ## Program Description
 ### factorial-digits.py
@@ -69,4 +70,4 @@ To keep the container after executing the 'docker run' command, use:
 
 ## Results
 
-![alt text](Results.PNG "Results")
+![alt text](Images/Results.PNG "Results")
