@@ -32,6 +32,7 @@ This assignment solves an algorithmic problem, where the factorial is found of t
 * Dockerfile
 * factorial-digits.py
 * README.md
+* Shivasen.tar.gz
 
 ## Program Description
 ### factorial-digits.py
