@@ -1,16 +1,21 @@
 import numpy
 import sys
+from fractions import Fraction as frac
 
 #function that gets the sum of the factorial digits
 def SumOfFractorial(n):
     FinalValue = 0
-    while(n>10):
-        ModValue = n %10
-        n = n//10
-        FinalValue = FinalValue + ModValue
-    if(n<10):
-        FinalValue = FinalValue + n
-    print(FinalValue)
+
+    #while loop to obtain each digit until n is less than 10
+    while True:
+        Remainder = numpy.remainder(n,10)   #gets the last digit from the number
+        n = frac(numpy.floor_divide(n,10))  #divides the number by 10 towards minus infinity and uses Fraction library to keep precision
+        FinalValue = numpy.add(FinalValue,Remainder)    #add single digit to the final value
+
+        if(n<10):
+            FinalValue = numpy.add(FinalValue,n)    #add last digit to final value
+            print(FinalValue)   #print final sum
+            break   #exit while loop
 
 #try and except to see if there is an input or not
 try:
@@ -22,9 +27,13 @@ try:
         print("Enter a number!")
         exit()  
 
+    #check if it is a negative number
+    if(digit<0):
+        print("Enter a positive number!")
+        exit()
 #calculate the factorial using the numpy factorial function
     result = numpy.math.factorial(digit)
-
+    
 #get the sum of the digits in the factorial using SumOfFactorial function created 
     SumOfFractorial(result)
 
